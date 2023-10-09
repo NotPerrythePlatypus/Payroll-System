@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;  
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  background-color: transparent;
+
+  font-size: 1px;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {color: #f1f1f1;}
+</style>
+</head>
+<body style="background-image:url('https://wallpaperaccess.com/full/4242594.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+overflow-x: hidden;
+">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="payslip.php">Payslip Generation</a>
+    <a href="icn.php">Fill Income Tax Form</a>
+    <a href="PFstatus.php">Check Provident Fund Status</a>
+    <a href="TERMS-AND-CONDITIONS.pdf">Terms And Conditions</a>
+    <a href="https://www.incometaxindia.gov.in/pages/rules/index.aspx">Rules</a>
+    <a href="Credits.pdf">Credits</a>
+    
+    
+    <div class="dropdown">
+  <a class="dropbtn">Guides</a>
+  <div class="dropdown-content" style="
+  background-color: transparent;
+
+  font-size: 1px;">
+    <a  style="font-size: 25px;" href="payslip_generation.pdf">How to receive Payslip</a>
+    <a style="font-size: 25px;" href="pf_guide.pdf">How to check PF status</a>
+    <a style="font-size: 25px;" href="itr_submission.pdf">How to submit Income Tax Form</a>
+  </div>
+
+</div>
+   
+ 
+</div>
+      
+</div>
+    
+
+
+<span style="font-size:45px;cursor:pointer;float: right; text-decoration: bold;" onclick="openNav()"><b> Payroll Management System &#9776;</b></span>
+<br>
+<span style="font-size:30px;cursor:pointer; margin-left: 70%;" >Financial Year 2022-23</span>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+<div class="header" style=" position: absolute;
+bottom: 0;
+background: rgb(0, 0, 0); /* Fallback color */
+background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+color: #f1f1f1;
+width: 100%;
+padding: 20px;">
+    <h3>No chargebacks will be entertained. In case of any problems related to this website, mail us on <b>anuragst.francis@gmail.com</b>. Compliant Browsers are Google Chrome-45 / Mozilla Firefox-42 / Safari-9 / Opera-33 / Internet Explorer-11. Any other browser or previous version of pre-mentioned browsers may present undesirable/unexpected behaviour.</h3>
+    </div>  
+
+
+</body>
+
+</html>
